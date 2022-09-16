@@ -44,7 +44,7 @@ class ControlAuto{
     }
 
     /**
-     * 
+     * Inserta un objeto
      * @param array $param
      */
     public function alta($param){
