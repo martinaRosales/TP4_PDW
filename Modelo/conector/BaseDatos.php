@@ -222,10 +222,5 @@ class BaseDatos extends PDO {
       return $this->resultado;
    }
    
-   
-   
-   
 
-   
- 
 } 
