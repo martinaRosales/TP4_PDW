@@ -26,7 +26,7 @@
     <div>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img style="width: 50px;height: 50px;" src="Assets/logo.svg" alt=""></a>
+            <a class="navbar-brand" href="#"><img style="width: 50px;height: 50px;" src="Assets/Img/logoSitio.svg" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,7 +41,7 @@
                         Autos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../../Vista/VerAutos.php">Ver listado de autos</a></li>
+                        <li><a class="dropdown-item" href="../VerAutos.php">Ver listado de autos</a></li>
                         <li><a class="dropdown-item" href="#">Buscar un auto</a></li>
                         <li><a class="dropdown-item" href="#">Agregar un auto</a></li>
                     </ul>
