@@ -49,7 +49,7 @@ class ControlAuto{
      */
     public function alta($param){
         $resp = false;
-        $param['patente'] = null;
+        //$param['patente'] = null; <- NO SE SI VA
         $objAuto = $this->cargarObjeto($param);
         if ($objAuto!=null and $objAuto->insertar()){
             $resp = true;

@@ -56,6 +56,9 @@ class Auto
         $this->patente = $patente;
     }
 
+    /**
+     * @return Persona
+     */
     public function getRDniDuenio()
     {
         return $this->rDniDuenio;
