@@ -14,7 +14,7 @@ include_once('../Modelo/Persona.php');
         <h2>Ejercicio 4</h2>
         <h3>Buscar Auto</h3>
 
-        <form class="needs-validation" novalidate id="from_horarios" name="from_horarios" method="post" action="accionBuscarAuto.php">
+        <form class="needs-validation" novalidate id="form_patente" name="form_patente" method="post" action="accionBuscarAuto.php">
     
         <!-- input -->
         <div class="mb-3">
