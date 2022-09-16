@@ -8,4 +8,3 @@ include_once 'Common/Footer.php';
         <h1>Ver Autos</h1>
         </div>
     </div>
-</div>
