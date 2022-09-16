@@ -13,7 +13,7 @@ class Auto
         $this->patente = "";
         $this->marca = "";
         $this->modelo = "";
-        $this->rDniDuenio = "";
+        $this->rDniDuenio = '';
         $this->mensaje = "";
     }
 
