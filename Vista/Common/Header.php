@@ -20,6 +20,7 @@
 
 </head>
 <body>
+
     <div>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
@@ -68,5 +69,3 @@
             </div>
         </nav>
     </div>
-</body>
-</html>
