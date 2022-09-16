@@ -1,5 +1,5 @@
 <?php
-
+include_once 'Persona.php';
 class Auto
 {
     private $patente;
@@ -94,7 +94,7 @@ class Auto
     {
         $base = new BaseDatos();
         $resp = false;
-        $sql = "SELECT * FROM auto WHERE Patente = " . $patente;
+        $sql = "SELECT * FROM auto WHERE Patente = '" . $patente . "'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 if ($row2 = $base->Registro()) {
@@ -117,11 +117,11 @@ class Auto
     }
 
     //LISTAR
-    public static function listar($condicion = '')
+    public function listar($condicion = '')
     {
         $array = null;
         $base = new BaseDatos();
-        $sql =  "SELECT * FROM auto";
+        $sql =  "SELECT * FROM auto ";
         if($condicion != ''){
             $sql = $sql . ' WHERE ' . $condicion;
         }
@@ -134,10 +134,10 @@ class Auto
                     $array[] = $objAuto;
                 }
             } else {
-                Auto::setMensaje($base->getError());
+                $this->setMensaje($base->getError());
             }
         } else {
-            Auto::setMensaje($base->getError());
+            $this->setMensaje($base->getError());
         }
         return $array;
     }
