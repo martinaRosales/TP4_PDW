@@ -14,6 +14,7 @@ $i = 0;
 
     <div class="container row gap-1">
         <h1>Ver Autos</h1>
+
         <?php
         while ($i < $cantidadAutos) {
         ?>
@@ -28,7 +29,7 @@ $i = 0;
                     Patente: <?php echo $arrayAutos[$i]->getPatente() ?> <br>
                     Marca: <?php echo $arrayAutos[$i]->getMarca() ?> <br>
                     Modelo: <?php echo $arrayAutos[$i]->getModelo() ?> <br> <hr>
-                    <div class="card-subtitle mb-2 text-muted"">Datos Dueño</div>
+                    <div class="card-subtitle mb-2 text-muted">Datos Dueño</div>
                     Nombre: <?php echo $arrayAutos[$i]->getRDniDuenio()->getNombre() ?> <br>
                     Apellido: <?php echo $arrayAutos[$i]->getRDniDuenio()->getApellido() ?>
                 </div>
