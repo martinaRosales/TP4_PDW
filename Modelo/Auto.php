@@ -17,13 +17,12 @@ class Auto
         $this->mensaje = "";
     }
 
-    public function cargar($patente, $marca, $modelo, $dniDuenio, $mensaje)
+    public function cargar($patente, $marca, $modelo, $dniDuenio)
     {
         $this->setPatente($patente);
         $this->setMarca($marca);
         $this->setModelo($modelo);
         $this->setRDniDuenio($dniDuenio);
-        $this->setMensaje($mensaje);
     }
 
     //Metodos de acceso
