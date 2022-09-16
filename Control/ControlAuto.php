@@ -97,16 +97,17 @@ class ControlAuto{
      * @return array
      */
     public function buscar($param){
-        $where = " true ";
+        //$where = " true "; 
         if ($param<>NULL){
+            $where = '';
             if  (isset($param['patente']))
                 $where.=" and Patente =".$param['patente'];
             if  (isset($param['marca']))
-                    $where.=" and Marca ='".$param['marca'];
+                    $where.=" and Marca ='".$param['marca']."'";
             if  (isset($param['modelo']))
-                    $where.=" and Modelo ='".$param['modelo'];
+                    $where.=" and Modelo =".$param['modelo'] ."'";
             if  (isset($param['dniDuenio']))
-                    $where.=" and DniDuenio ='".$param['dniDuenio'];
+                    $where.=" and DniDuenio =".$param['dniDuenio'];
         }
         $objAuto = new Auto();
         $arreglo =  $objAuto->listar($where);  
