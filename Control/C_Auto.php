@@ -1,6 +1,6 @@
 <?php
 include_once '../Modelo/Auto.php';
-include_once '../Modelo/conector/BaseDatos.php';
+
 class ControlAuto{
 
     /**
