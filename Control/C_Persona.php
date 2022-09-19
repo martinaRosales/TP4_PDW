@@ -6,7 +6,7 @@ class C_Persona{
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $param
-     * @return Tabla
+     * @return Persona
      */
 
     private function cargarObjeto($param){
@@ -25,14 +25,14 @@ class C_Persona{
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto que son claves
      * @param array $param
-     * @return Tabla
+     * @return Persona
      */
     private function cargarObjetoConClave($param){
         $obj = null;
         
         if( isset($param['Nro_dni']) ){
-            $obj = new Tabla();
-            $obj->cargar($param['Nro_dni'], null);
+            $obj = new Persona();
+            $obj->cargar($param['Nro_dni'], null, null, null, null, null);
         }
         return $obj;
     }
@@ -57,9 +57,9 @@ class C_Persona{
      */
     public function alta($param){
         $resp = false;
-        $elObjtTabla = $this->cargarObjeto($param);
+        $elObjtPersona = $this->cargarObjeto($param);
 //        verEstructura($elObjtTabla);
-        if ($elObjtTabla!=null && $elObjtTabla->insertar()){
+        if ($elObjtPersona!=null && $elObjtPersona->insertar()){
             $resp = true;
         }
         return $resp;
@@ -73,8 +73,8 @@ class C_Persona{
     public function baja($param){
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
-            $elObjtTabla = $this->cargarObjetoConClave($param);
-            if ($elObjtTabla!=null and $elObjtTabla->eliminar()){
+            $elObjtPersona = $this->cargarObjetoConClave($param);
+            if ($elObjtPersona!=null and $elObjtPersona->eliminar()){
                 $resp = true;
             }
         }
@@ -91,8 +91,8 @@ class C_Persona{
         //echo "Estoy en modificacion";
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
-            $elObjtTabla = $this->cargarObjeto($param);
-            if($elObjtTabla!=null and $elObjtTabla->modificar()){
+            $elObjtPersona = $this->cargarObjeto($param);
+            if($elObjtPersona!=null and $elObjtPersona->modificar()){
                 $resp = true;
             }
         }
@@ -120,7 +120,7 @@ class C_Persona{
             if  (isset($param['Domicilio']))
                  $where.=" and Domicilio='".$param['Domicilio']."'";
         }
-        $arreglo = Tabla::listar($where);  
+        $arreglo = Persona::listar($where);  
         return $arreglo;
             
         

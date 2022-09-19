@@ -1,6 +1,6 @@
 <?php
 include_once 'Common/Header.php';
-include_once 'Common/Footer.php';
+
 include_once '../Control/C_Auto.php';
 
 $objControlAuto = new ControlAuto();
@@ -44,3 +44,6 @@ $i = 0;
         ?>
     </div>
 </div>
+
+<?php
+include_once 'Common/Footer.php'; ?>
