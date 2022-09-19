@@ -139,6 +139,7 @@ class Auto
         } else {
             $this->setMensaje($base->getError());
         }
+        
         return $array;
     }
 

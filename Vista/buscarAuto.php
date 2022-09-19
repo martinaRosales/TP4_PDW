@@ -16,7 +16,7 @@ include_once('../Modelo/Persona.php');
 
         <form class="needs-validation" novalidate id="form_patente" name="form_patente" method="post" action="accionBuscarAuto.php">
     
-        <!-- input -->
+        <!-- cont input -->
         <div class="mb-3">
         <label for="" class="form-label">Ingrese número de patente del auto: </label>
         <input type="text" class="form-control" id="patente" name="patente" min="0" required>
@@ -34,11 +34,11 @@ include_once('../Modelo/Persona.php');
             <!-- valid feedback -->
     
         </div>    
-        <!-- input -->
+        <!-- cont input -->
 
         <!-- submit -->
         <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Guardar</button>
+        <input class="btn btn-primary" type="submit" value='Guardar'></input>
         </div>
         <!-- submit -->
 
