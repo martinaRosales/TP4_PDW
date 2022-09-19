@@ -1,4 +1,5 @@
 <?php
+include ('conector/BaseDatos.php');
 class Persona{
     private $Nro_dni;
     private $Nombre;
@@ -169,7 +170,7 @@ class Persona{
     public function insertar(){
         $base = new BaseDatos();
         $rta = false;
-        $consulta = "INSERT INTO persona (NroDni, Nombre, Apellido, Telefono, Domicilio) VALUES( '{$this->getNro_dni()}' , '{$this->getNombre()}' ,'{$this->getApellido()}' , '{$this->getTelefono()}' , '{$this->getDomicilio()}', '{$this->getFechaNac()}')";
+        $consulta = "INSERT INTO persona (NroDni, Nombre, Apellido, Telefono, Domicilio, fechaNac) VALUES( '{$this->getNro_dni()}' , '{$this->getNombre()}' ,'{$this->getApellido()}' , '{$this->getTelefono()}' , '{$this->getDomicilio()}', '{$this->getFechaNac()}')";
         if($base->Iniciar()){
             if($base->Ejecutar($consulta)){
                 $rta = true;

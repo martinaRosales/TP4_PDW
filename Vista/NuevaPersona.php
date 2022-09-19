@@ -9,15 +9,15 @@ include_once('Common/Header.php');
     <form action="accionNuevaPersona.php" class="needs-validation m-3" novalidate id="form-nuevaPersona" name="form-nuevaPersona" method="post">
         <div class="row gap-2 justify-content-center">
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre">
                 <label for="floatingInput">Nombre</label>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Apellido" placeholder="Apellido">
+                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido">
                 <label for="floatingInput">Apellido</label>
             </div>
             <div class="form-floating col-3">
-                <input type="number" class="form-control" id="Nro_dni" placeholder="Numero Documento" required>
+                <input type="number" class="form-control" id="Nro_dni" name="Nro_dni" placeholder="Numero Documento" required>
                 <label for="floatingInput">Documento</label>
                 <div class="invalid-feedback">
                     Debe ingresar un documento.
@@ -27,15 +27,15 @@ include_once('Common/Header.php');
                 </div>
             </div>
             <div class="form-floating col-3">
-                <input type="date" class="form-control" id="fechaNac">
+                <input type="date" class="form-control" name="fechaNac" id="fechaNac">
                 <label for="floatingInput">Fecha Nacimiento</label>
             </div>
             <div class="form-floating col-3">
-                <input type="number" class="form-control" id="Telefono" placeholder="Numero Telefono">
+                <input type="number" class="form-control" id="Telefono" name="Telefono" placeholder="Numero Telefono">
                 <label for="floatingInput">Numero Telefono</label>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Direccion" placeholder="Direccion">
+                <input type="text" class="form-control" id="Domicilio" name="Domicilio" placeholder="Direccion">
                 <label for="floatingInput">Direccion</label>
             </div>
         </div>

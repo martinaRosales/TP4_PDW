@@ -1,4 +1,5 @@
 <?php
+include '../Modelo/Persona.php';
 class C_Persona{
     //Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
@@ -12,12 +13,15 @@ class C_Persona{
     private function cargarObjeto($param){
         $obj=null;
 
-        if(array_key_exists('Nro_dni',$param) && array_key_exists('Nombre',$param) 
-                        && array_key_exists('Apellido',$param) && array_key_exists('fechaNac',$param) 
-                        && array_key_exists('Telefono',$param) && array_key_exists('Domicilio',$param)){
+        if(array_key_exists('Nro_dni',$param) ){
 
         $obj=New Persona();
-        $obj->cargar($param['Nro_dni'], $param['Nombre'],$param['Apellido'],$param['fechaNac'], $param['Telefono'], $param['Domicilio']);
+        $obj->cargar($param['Nro_dni'], 
+        $param['Nombre'],
+        $param['Apellido'],
+        $param['fechaNac'], 
+        $param['Telefono'], 
+        $param['Domicilio']);
         }
         return $obj;
     }
