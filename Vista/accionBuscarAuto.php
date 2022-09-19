@@ -9,15 +9,18 @@ $datos = data_submitted();
 $objAuto = new ControlAuto();
 
 $buscar = $objAuto->buscar($datos);
+?>
 
+<div  class="container col-md-5 " style="margin:30px;height:150vh;">
+<?php
 if(isset($buscar)){
-    echo '<table> <tr> <th> Patente: </th> <td>'.$buscar[0]->getPatente().'</td> </tr>
-                    <tr> <th> Marca: </th> <td>'.$buscar[0]->getMarca().'</td> </tr>
-                    <tr> <th> Modelo: </th> <td>'.$buscar[0]->getModelo().'</td> </tr>
-                    <tr> <th> Dni del duenio: </th> <td>'.$buscar[0]->getRDniDuenio()->getNro_dni().'</td> </tr>
+    echo '<table class="table table-primary table-striped table-bordered " > <tr> <th> <h3>Patente:</h3> </th> <td>'.$buscar[0]->getPatente().'</td> </tr>
+                    <tr> <th > <h3>Marca:</h3> </th> <td>'.$buscar[0]->getMarca().'</td> </tr>
+                    <tr> <th> <h3>Modelo:</h3> </th> <td>'.$buscar[0]->getModelo().'</td> </tr>
+                    <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNro_dni().'</td> </tr>
           </table>'; 
 }else{
-    echo 'No se ha encontrado el auto correspondiente a la patente ingresada';
+    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada<h2>';
 }
-
 ?>
+</div>
