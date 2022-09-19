@@ -103,7 +103,7 @@ class ControlAuto{
         if ($param<>NULL){
             $where = '';
             if  (isset($param['patente']))
-                $where.=" and Patente ='".$param['patente']."'";
+                $where.=" Patente ='".$param['patente']."'";
             if  (isset($param['marca']))
                     $where.=" and Marca ='".$param['marca']."'";
             if  (isset($param['modelo']))
@@ -113,6 +113,7 @@ class ControlAuto{
         }
         $objAuto = new Auto();
         $arreglo =  $objAuto->listar($where);  
+        
         return $arreglo;
     }
 }
