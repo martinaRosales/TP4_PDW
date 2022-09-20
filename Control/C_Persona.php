@@ -31,9 +31,9 @@ class C_Persona{
     private function cargarObjetoConClave($param){
         $obj = null;
         
-        if( isset($param['Nro_dni']) ){
+        if( isset($param['NroDni']) ){
             $obj = new Persona();
-            $obj->cargar($param['Nro_dni'], null, null, null, null, null);
+            $obj->cargar($param['NroDni'], null, null, null, null, null);
         }
         return $obj;
     }
