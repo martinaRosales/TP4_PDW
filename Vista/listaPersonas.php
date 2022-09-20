@@ -1,6 +1,6 @@
 <?php
 include_once 'Common/Header.php';
-include_once 'Common/Footer.php';
+//include_once 'Common/Footer.php';
 include_once '../Control/C_Persona.php';
 
 $objControlPersona=new C_Persona();
@@ -9,7 +9,7 @@ $cantPersonas=count($arrayPersonas);
 ?>
 <div class="container-md mt-5">
   <div class=text-center>
-  <a href="autosPersona.php" class="btn btn-primary mb-3">VER AUTOS</a>
+  <a href="seleccionarPersona.php" class="btn btn-primary mb-3">VER AUTOS</a>
   </div>
 <table class="table">
   <thead>
