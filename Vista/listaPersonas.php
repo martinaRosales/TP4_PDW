@@ -7,7 +7,10 @@ $objControlPersona=new C_Persona();
 $arrayPersonas=$objControlPersona->buscar(NULL);
 $cantPersonas=count($arrayPersonas);
 ?>
-<div class="container-md">
+<div class="container-md mt-5">
+  <div class=text-center>
+  <a href="autosPersona.php" class="btn btn-primary mb-3">VER AUTOS</a>
+  </div>
 <table class="table">
   <thead>
     <tr>
@@ -20,7 +23,7 @@ $cantPersonas=count($arrayPersonas);
     </tr>
   </thead>
   <h1>
-    <?php echo $cantPersonas;
+    <?php 
             $i=0;
             while ($i<$cantPersonas){
                 ?>
