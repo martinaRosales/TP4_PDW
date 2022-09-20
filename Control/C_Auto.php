@@ -101,9 +101,9 @@ class ControlAuto{
     public function buscar($param){
         $where = " true "; 
         if ($param<>NULL){
-            $where = '';
+            $where .= '';
             if  (isset($param['patente']))
-                $where.=" and Patente ='".$param['patente']."'";
+                $where.=" and Patente ='".$param['patente']."'"; 
             if  (isset($param['marca']))
                     $where.=" and Marca ='".$param['marca']."'";
             if  (isset($param['modelo']))
@@ -113,6 +113,7 @@ class ControlAuto{
         }
         $objAuto = new Auto();
         $arreglo =  $objAuto->listar($where);  
+        
         return $arreglo;
     }
 }

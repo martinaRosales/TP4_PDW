@@ -122,9 +122,9 @@ class Auto
     {
         $array = null;
         $base = new BaseDatos();
-        $sql =  "SELECT * FROM auto ";
+        $sql =  "select * from auto";
         if($condicion != ''){
-            $sql = $sql . ' WHERE ' . $condicion;
+            $sql = $sql.' where '.$condicion;
         }
         if($base->Iniciar()){
             if($base->Ejecutar($sql)){
@@ -140,6 +140,7 @@ class Auto
         } else {
             $this->setMensaje($base->getError());
         }
+        
         return $array;
     }
 
