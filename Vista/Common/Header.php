@@ -41,8 +41,8 @@
                         Autos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../VerAutos.php">Ver listado de autos</a></li>
-                        <li><a class="dropdown-item" href="../buscarAuto.php">Buscar un auto</a></li>
+                        <li><a class="dropdown-item" href="../Vista/VerAutos.php">Ver listado de autos</a></li>
+                        <li><a class="dropdown-item" href="../Vista/buscarAuto.php">Buscar un auto</a></li>
                         <li><a class="dropdown-item" href="#">Agregar un auto</a></li>
                     </ul>
                     </li>
@@ -52,8 +52,8 @@
                         Personas
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Ver listado de personas</a></li>
-                        <li><a class="dropdown-item" href="#">Buscar a una persona</a></li>
+                        <li><a class="dropdown-item" href="../Vista/listaPersonas.php">Ver listado de personas</a></li>
+                        <li><a class="dropdown-item" href="../Vista/buscarPersona.php">Buscar a una persona</a></li>
                         <li><a class="dropdown-item" href="#">Agregar una persona</a></li>
                     </ul>
                     </li>
