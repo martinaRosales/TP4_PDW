@@ -44,7 +44,7 @@ $cantPersonas=count($arrayPersonas);
 </div>
 <div class="container-md">
     <div class="row justify-content-center">
-      <form class="w-50 mt-3" action="accionBuscarAutosdePersona.php" method="post">
+      <form class="w-50 mt-3" action="autosPersona.php" method="post">
       <h6>Seleccione el dni de la persona a buscar</h6>
         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" 
                 name="dni[]" id="dni">
