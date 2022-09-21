@@ -11,7 +11,7 @@ $modifico=$objControladorPersona->modificacion($datos);
 
 if($modifico){
     ?>
-    <div class="container-md my-5 w-50">
+    <div class="container-md my-5 w-75">
         <div class="alert alert-info text-center" role="alert">
             ¡Persona modificada correctamente!
         </div>
@@ -27,7 +27,7 @@ if($modifico){
 <?php
 }else{
     ?>
-    <div class="container-md my-5 w-50">
+    <div class="container-md my-5 w-75">
     <div class="alert alert-danger text-center" role="alert">
         Error al modificar persona
     </div>
