@@ -1,4 +1,5 @@
 <?php
+include_once("../Modelo/Persona.php");
 class C_Persona{
     //Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
@@ -12,12 +13,12 @@ class C_Persona{
     private function cargarObjeto($param){
         $obj=null;
 
-        if(array_key_exists('Nro_dni',$param) && array_key_exists('Nombre',$param) 
+        if(array_key_exists('NroDni',$param) && array_key_exists('Nombre',$param) 
                         && array_key_exists('Apellido',$param) && array_key_exists('fechaNac',$param) 
                         && array_key_exists('Telefono',$param) && array_key_exists('Domicilio',$param)){
 
         $obj=New Persona();
-        $obj->cargar($param['Nro_dni'], $param['Nombre'],$param['Apellido'],$param['fechaNac'], $param['Telefono'], $param['Domicilio']);
+        $obj->cargar($param['NroDni'], $param['Nombre'],$param['Apellido'],$param['fechaNac'], $param['Telefono'], $param['Domicilio']);
         }
         return $obj;
     }
@@ -30,9 +31,9 @@ class C_Persona{
     private function cargarObjetoConClave($param){
         $obj = null;
         
-        if( isset($param['Nro_dni']) ){
+        if( isset($param['NroDni']) ){
             $obj = new Persona();
-            $obj->cargar($param['Nro_dni'], null, null, null, null, null);
+            $obj->cargar($param['NroDni'], null, null, null, null, null);
         }
         return $obj;
     }
@@ -46,7 +47,7 @@ class C_Persona{
     
     private function seteadosCamposClaves($param){
         $resp = false;
-        if (isset($param['Nro_dni']))
+        if (isset($param['NroDni']))
             $resp = true;
         return $resp;
     }
@@ -107,8 +108,8 @@ class C_Persona{
     public function buscar($param){
         $where = " true ";
         if ($param<>NULL){
-            if  (isset($param['Nro_dni']))
-                $where.=" and Nro_dni=".$param['Nro_dni'];
+            if  (isset($param['NroDni']))
+                $where.=" and NroDni=".$param['NroDni'];
             if  (isset($param['Nombre']))
                 $where.=" and Nombre=".$param['Nombre'];
             if  (isset($param['Apellido']))
@@ -120,7 +121,8 @@ class C_Persona{
             if  (isset($param['Domicilio']))
                  $where.=" and Domicilio='".$param['Domicilio']."'";
         }
-        $arreglo = Persona::listar($where);  
+        $objPersona = new Persona();
+        $arreglo = $objPersona->listar($where);  
         return $arreglo;
             
         
