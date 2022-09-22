@@ -17,8 +17,8 @@ $cantPersonas=count($arrayPersonas);
         <?php 
             $i=0;
             while ($i<$cantPersonas){
-                echo "<option value=".$arrayPersonas[$i]->getNro_dni().">"
-                        .$arrayPersonas[$i]->getNro_dni()."</option>";
+                echo "<option value=".$arrayPersonas[$i]->getNroDni().">"
+                        .$arrayPersonas[$i]->getNroDni()."</option>";
                 $i++;
             }
         ?>

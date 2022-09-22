@@ -13,10 +13,11 @@ class C_Persona{
     private function cargarObjeto($param){
         $obj=null;
 
-        if(array_key_exists('Nro_dni',$param) ){
+        if(array_key_exists('NroDni', $param) ){
+        //if($param['NroDni']!='null' ){
 
         $obj=New Persona();
-        $obj->cargar($param['Nro_dni'], 
+        $obj->cargar($param['NroDni'], 
         $param['Nombre'],
         $param['Apellido'],
         $param['fechaNac'], 

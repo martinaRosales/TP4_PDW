@@ -1,7 +1,7 @@
 <?php
 include_once('conector/BaseDatos.php');
 class Persona{
-    private $Nro_dni;
+    private $NroDni;
     private $Nombre;
     private $Apellido;
     private $fechaNac;
@@ -11,7 +11,7 @@ class Persona{
 
     public function __construct()
     {
-        $this->Nro_dni="";
+        $this->NroDni="";
         $this->Nombre="";
         $this->Apellido="";
         $this->fechaNac="";
@@ -22,7 +22,7 @@ class Persona{
 
     public function cargar($dni, $nombre, $apellido, $nacimiento, $telefono, $domicilio)
     {
-        $this->setNro_dni($dni);
+        $this->setNroDni($dni);
         $this->setNombre($nombre);
         $this->setApellido($apellido);
         $this->setFechaNac($nacimiento);
@@ -31,14 +31,14 @@ class Persona{
 
     }
 
-    public function getNro_dni()
+    public function getNroDni()
     {
-        return $this->Nro_dni;
+        return $this->NroDni;
     }
 
-    public function setNro_dni($Nro_dni)
+    public function setNroDni($NroDni)
     {
-        $this->Nro_dni = $Nro_dni;
+        $this->NroDni = $NroDni;
 
         return $this;
     }
@@ -124,7 +124,7 @@ class Persona{
         if($base->Iniciar()){
             if($base->Ejecutar($consulta)){
                 if($row2 = $base->Registro()){
-                    $this->setNro_dni($row2['NroDni']);
+                    $this->setNroDni($row2['NroDni']);
                     $this->setNombre($row2['Nombre']);
                     $this->setApellido($row2['Apellido']);
                     $this->setTelefono($row2['Telefono']);
@@ -169,7 +169,7 @@ class Persona{
     public function insertar(){
         $base = new BaseDatos();
         $rta = false;
-        $consulta = "INSERT INTO persona (NroDni, Nombre, Apellido, Telefono, Domicilio, fechaNac) VALUES( '{$this->getNro_dni()}' , '{$this->getNombre()}' ,'{$this->getApellido()}' , '{$this->getTelefono()}' , '{$this->getDomicilio()}', '{$this->getFechaNac()}')";
+        $consulta = "INSERT INTO persona (NroDni, Nombre, Apellido, Telefono, Domicilio, fechaNac) VALUES( '{$this->getNroDni()}' , '{$this->getNombre()}' ,'{$this->getApellido()}' , '{$this->getTelefono()}' , '{$this->getDomicilio()}', '{$this->getFechaNac()}')";
         if($base->Iniciar()){
             if($base->Ejecutar($consulta)){
                 $rta = true;
@@ -185,7 +185,7 @@ class Persona{
     public function modificar(){
         $rta = false;
         $base = new BaseDatos();
-        $consulta = "UPDATE persona SET Nombre = '{$this->getNombre()}', Apellido = '{$this->getApellido()}', Telefono = '{$this->getTelefono()}', Domicilio = '{$this->getDomicilio()}', fechaNac = '{$this->getFechaNac()}' WHERE NroDni =  '{$this->getNro_dni()}'";
+        $consulta = "UPDATE persona SET Nombre = '{$this->getNombre()}', Apellido = '{$this->getApellido()}', Telefono = '{$this->getTelefono()}', Domicilio = '{$this->getDomicilio()}', fechaNac = '{$this->getFechaNac()}' WHERE NroDni =  '{$this->getNroDni()}'";
         if($base->Iniciar()){
             if($base->Ejecutar($consulta)){
                 $rta = true;
@@ -201,7 +201,7 @@ class Persona{
     public function eliminar(){
         $base = new BaseDatos();
         $rta = false;
-        $consulta = "DELETE FROM persona WHERE NroDni = " . $this->getNro_dni();
+        $consulta = "DELETE FROM persona WHERE NroDni = " . $this->getNroDni();
         if($base->Iniciar()){
             if($base->Ejecutar($consulta)){
                 $rta = true;

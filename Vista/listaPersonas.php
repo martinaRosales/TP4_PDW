@@ -4,7 +4,7 @@ include_once 'Common/Header.php';
 include_once '../Control/C_Persona.php';
 
 $objControlPersona=new C_Persona();
-$arrayPersonas=$objControlPersona->buscar(NULL);
+$arrayPersonas = $objControlPersona->buscar(NULL);
 $cantPersonas=count($arrayPersonas);
 ?>
 <div class="container-md my-4 mt-5">
@@ -26,7 +26,7 @@ $cantPersonas=count($arrayPersonas);
                 ?>
                 <tbody>
                 <tr>
-                  <th><?php echo $arrayPersonas[$i]->getNro_dni()?></th>
+                  <th><?php echo $arrayPersonas[$i]->getNroDni()?></th>
                   <td><?php echo $arrayPersonas[$i]->getNombre()?></td>
                   <td><?php echo $arrayPersonas[$i]->getApellido()?></td>
                   <td><?php echo $arrayPersonas[$i]->getFechaNac()?></td>
@@ -51,8 +51,8 @@ $cantPersonas=count($arrayPersonas);
         <?php 
             $i=0;
             while ($i<$cantPersonas){
-                echo "<option value=".$arrayPersonas[$i]->getNro_dni().">"
-                        .$arrayPersonas[$i]->getNro_dni()."</option>";
+                echo "<option value=".$arrayPersonas[$i]->getNroDni().">"
+                        .$arrayPersonas[$i]->getNroDni()."</option>";
                 $i++;
             }
         ?>

@@ -153,7 +153,7 @@ class Auto
         $marca = $this->getMarca();
         $modelo = $this->getModelo();
         $duenio = $this->getRDniDuenio();
-        $dniDuenio = $duenio->getNro_dni();
+        $dniDuenio = $duenio->getNroDni();
         //Creo la consulta 
         $sql = "INSERT INTO auto (Patente, Marca, Modelo, DniDuenio) VALUES ('{$patente}', '{$marca}'. '{$modelo}', '{$dniDuenio}')";
         if($base->Iniciar()){
@@ -175,7 +175,7 @@ class Auto
         $marca = $this->getMarca();
         $modelo = $this->getModelo();
         $duenio = $this->getRDniDuenio();
-        $dniDuenio = $duenio->getNro_dni();
+        $dniDuenio = $duenio->getNroDni();
         $sql = "UPDATE auto SET Marca = '{$marca}', Modelo = '{$modelo}', DniDuenio = '{$dniDuenio}' WHERE Patente = '{$patente}'";
         if($base->Iniciar()){
             if($base->Ejecutar($sql)){
