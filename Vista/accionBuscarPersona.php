@@ -15,7 +15,7 @@ $personaDatos=$objControladorPersona->buscar($param);
             <div class="col-6 col-lg-4">
                     <label for="NroDni" class="form-label">DNI</label>
                     <input type="number" class="form-control" 
-                    value=<?php echo $personaDatos[0]->getNro_dni()?> name="NroDni" id="NroDni" readonly>
+                    value=<?php echo $personaDatos[0]->getNroDni()?> name="NroDni" id="NroDni" readonly>
                 </div>
                 <div class="col-6 col-lg-4">
                     <label for="Nombre" class="form-label">Nombre</label>

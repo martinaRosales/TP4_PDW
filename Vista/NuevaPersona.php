@@ -9,14 +9,14 @@ include_once('Common/Header.php');
     <form action="accionNuevaPersona.php" class="needs-validation m-3" novalidate id="form-nuevaPersona" name="form-nuevaPersona" method="post">
         <div class="row gap-2 justify-content-center">
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" minlength="5" pattern="[a-zA-Z ]{5,30}">
+                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" required pattern="[a-zA-Z ]{5,30}">
                 <label for="floatingInput">Nombre</label>
                 <div class="invalid-feedback">
                     Debe ingresar mas de 5 caracteres y solamente letras.
                 </div>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" minlength="5" pattern="[a-zA-Z ]{5,30}">
+                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" required pattern="[a-zA-Z ]{5,30}">
                 <div class="invalid-feedback">
                     Debe ingresar mas de 5 caracteres y solamente letras.
                 </div>

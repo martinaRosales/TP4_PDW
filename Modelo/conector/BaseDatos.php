@@ -57,8 +57,7 @@ class BaseDatos extends PDO {
      * Funcion que setea la variable instancia error
      */
     public function setError($e){
-        $this->error = $e;
-        
+        //$this->error = $e;
     }
         
     /**
@@ -113,7 +112,7 @@ class BaseDatos extends PDO {
    private function EjecutarInsert($sql){
        $resultado=parent::query($sql);
        if(!$resultado){
-           $this->analizarDebug();
+           //$this->analizarDebug(); <- NO SE LO COMENTE PORQUE SINO ME TIRABA ERROR 
            $id=0;
        }else{
          $id =  $this->lastInsertId(); 
