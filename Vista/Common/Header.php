@@ -67,7 +67,7 @@ include_once('../configuracion.php');
                                 Tr&aacute;mites
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cambiar el dueño de un auto</a></li>
+                                <li><a class="dropdown-item" href="../Vista/cambiarDuenio.php">Cambiar el dueño de un auto</a></li>
                             </ul>
                         </li>
                     </ul>
