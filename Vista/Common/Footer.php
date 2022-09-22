@@ -1,4 +1,5 @@
-<footer class="page-footer font-small blue bg-primary static-bottom">
+
+<footer class="page-footer font-small blue bg-primary fixed-bottom">
 
     <!-- Copyright -->
     <div class="container">

@@ -29,3 +29,6 @@ $cantPersonas=count($arrayPersonas);
       </form >
     </div>
 </div>
+<?php
+include_once('Common/Footer.php');
+?>
