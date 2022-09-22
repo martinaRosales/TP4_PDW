@@ -10,8 +10,8 @@ include_once('../Modelo/Persona.php');
 <div  class="container-fluid">
     
     <!-- container formulario -->
-    <div class="container col-md-5" style="margin:50px;height:200px;">
-        <h2>Buscar Auto</h2>
+    <div class="container col-md-5" style="margin:30px;height:200px;">
+        <h2>Cambiar Dueño</h2>
 
         <form class="needs-validation" novalidate id="form_patente" name="form_patente" method="post" action="accionBuscarAuto.php">
     
@@ -31,7 +31,7 @@ include_once('../Modelo/Persona.php');
                  Patente válida!
             </div>
             <!-- valid feedback -->
-    
+
         </div>    
         <!-- cont input -->
 
@@ -45,7 +45,7 @@ include_once('../Modelo/Persona.php');
 
         <script src="Assets/Javascript/buscarAuto.js"></script>
 
-    </div>
+ </div>
     <!-- container formulario -->
 
 </div>

@@ -23,4 +23,8 @@ if(isset($buscar)){
     echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada<h2>';
 }
 ?>
+
+<div class="mb-3">
+       <a href= "buscarAuto.php" class="btn btn-primary">Volver</a>
+    </div>
 </div>
