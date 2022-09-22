@@ -1,9 +1,5 @@
 <?php
-
 include_once('Common/Header.php');
-include_once('../Modelo/Auto.php');
-include_once('../Modelo/Persona.php');
-
 ?>
 
 <!-- container -->

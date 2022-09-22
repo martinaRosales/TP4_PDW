@@ -9,15 +9,15 @@ include_once('Common/Header.php');
     <form action="accionNuevoAuto.php" class="needs-validation m-3" novalidate id="form-nuevoAuto" name="form-nuevoAuto" method="post">
         <div class="row gap-2 justify-content-center">
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="marca" name="marca" placeholder="Marca">
+                <input type="text" class="form-control" id="marca" name="Marca" placeholder="Marca">
                 <label for="floatingInput">Marca</label>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="modelo" name="modelo" placeholder="Modelo">
+                <input type="text" class="form-control" id="modelo" name="Modelo" placeholder="Modelo">
                 <label for="floatingInput">Modelo</label>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="patente" name="patente" placeholder="Patente" required>
+                <input type="text" class="form-control" id="patente" name="Patente" placeholder="Patente" required>
                 <label for="floatingInput">Patente</label>
                 <div class="invalid-feedback">
                     Debe ingresar una patente.

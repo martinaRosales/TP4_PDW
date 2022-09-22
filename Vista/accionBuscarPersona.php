@@ -1,8 +1,5 @@
 <?php
 include_once 'Common/Header.php';
-//include_once 'Common/Footer.php';
-include_once '../Control/C_Persona.php';
-include_once '../Util/funciones.php';
 
 $objControladorPersona=new C_Persona();
 $datos = data_submitted();

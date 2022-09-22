@@ -1,9 +1,8 @@
 <?php
 include_once 'Common/Header.php';
+//include_once '../Control/C_Auto.php';
 
-include_once '../Control/C_Auto.php';
-
-$objControlAuto = new ControlAuto();
+$objControlAuto = new C_Auto();
 $arrayAutos = $objControlAuto->buscar(NULL);
 if($arrayAutos!=null){
     $cantidadAutos = count($arrayAutos);

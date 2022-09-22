@@ -1,14 +1,12 @@
 <?php
 include('Common/Header.php');
-include ('../Control/C_Auto.php');
-include ('../Util/funciones.php');
 
 $datos = data_submitted();
-$objControlador = new ControlAuto();
+$objControlador = new C_Auto();
 $exito = $objControlador->alta($datos); 
 ?>
 <div class="container-fluid">
-    <h1>Nueva persona</h1>
+    <h1>Nuevo auto</h1>
     <?php 
         if($exito){
             ?>
