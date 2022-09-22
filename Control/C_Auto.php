@@ -10,9 +10,13 @@ class ControlAuto{
      */
     private function cargarObjeto($param){
         $obj = null;
-        if( array_key_exists('patente',$param) and array_key_exists('marca',$param) and array_key_exists('modelo',$param) and array_key_exists('rDniDuenio',$param)){
-            $obj = new Auto();
-            $obj->cargar($param['patente'], $param['marca'], $param['modelo'], $param['dniDuenio']);
+        if(array_key_exists('patente',$param) ){
+
+            $obj=New Auto();
+            $obj->cargar($param['patente'], 
+            $param['marca'],
+            $param['modelo'],
+            $param['dniDuenio']);
         }
         return $obj;
     }
