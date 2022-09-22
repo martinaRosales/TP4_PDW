@@ -191,6 +191,7 @@ class Persona{
                 $rta = true;
             }else{
                 $this->setMensaje($base->getError());
+                $rta=true;
             }
         }else{
             $this->setMensaje($base->getError());
