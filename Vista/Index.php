@@ -1,6 +1,8 @@
 <?php
 include_once('Common/Header.php');
+
 ?>
+
 <link rel="stylesheet" href="Assets/CSS/Estilos.css">
 <div id="indexElement">
   <h1>PWD</h1>

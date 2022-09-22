@@ -1,7 +1,7 @@
 <?php
 include_once '../Modelo/Auto.php';
 
-class ControlAuto{
+class C_Auto{
 
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
@@ -10,9 +10,13 @@ class ControlAuto{
      */
     private function cargarObjeto($param){
         $obj = null;
-        if( array_key_exists('patente',$param) and array_key_exists('marca',$param) and array_key_exists('modelo',$param) and array_key_exists('rDniDuenio',$param)){
-            $obj = new Auto();
-            $obj->cargar($param['patente'], $param['marca'], $param['modelo'], $param['dniDuenio']);
+        if(array_key_exists('Patente',$param) ){
+
+            $obj=New Auto();
+            $obj->cargar($param['Patente'], 
+            $param['Marca'],
+            $param['Modelo'],
+            $param['dniDuenio']);
         }
         return $obj;
     }
