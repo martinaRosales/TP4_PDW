@@ -1,5 +1,5 @@
-
-<footer class="page-footer font-small blue bg-primary fixed-bottom">
+<link rel="stylesheet" href="Assets/CSS/Estilos.css">
+<footer class="page-footer font-small blue bg-primary">
 
     <!-- Copyright -->
     <div class="container">
