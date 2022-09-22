@@ -23,7 +23,7 @@ include_once('Common/Header.php');
                 <label for="floatingInput">Apellido</label>
             </div>
             <div class="form-floating col-3">
-                <input type="number" class="form-control" id="NroDni" name="NroDni" placeholder="Numero Documento" min="00000000" max="99999999" required >
+                <input type="number" class="form-control" id="NroDni" name="NroDni" placeholder="Numero Documento" required pattern="[0-9]{8,12}"  >
                 <label for="floatingInput">Documento</label>
                 <div class="invalid-feedback">
                     Debe ingresar un documento.
