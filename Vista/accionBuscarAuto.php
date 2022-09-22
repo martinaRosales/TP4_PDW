@@ -1,12 +1,9 @@
 <?php
-
-include_once('../Control/C_Auto.php');
-include_once('../Util/funciones.php');
 include_once('Common/Header.php');
 
 $datos = data_submitted();
 
-$objAuto = new ControlAuto();
+$objAuto = new C_Auto();
 
 $buscar = $objAuto->buscar($datos);
 ?>

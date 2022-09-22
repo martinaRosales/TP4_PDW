@@ -1,5 +1,6 @@
 <?php
 include_once('Common/Header.php');
+
 ?>
 
 <link rel="stylesheet" href="Assets/CSS/Estilos.css">
