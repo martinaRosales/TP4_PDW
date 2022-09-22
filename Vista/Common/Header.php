@@ -26,14 +26,14 @@
     <div>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img style="width: 50px;height: 50px;" src="Assets/Img/logoSitio.svg" alt=""></a>
+            <a class="navbar-brand" href="../Vista/Index.php"><img style="width: 50px;height: 50px;" src="Assets/Img/logoSitio.svg" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../Vista/Index.php">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -54,7 +54,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../Vista/listaPersonas.php">Ver listado de personas</a></li>
                         <li><a class="dropdown-item" href="../Vista/buscarPersona.php">Buscar a una persona</a></li>
-                        <li><a class="dropdown-item" href="#">Agregar una persona</a></li>
+                        <li><a class="dropdown-item" href="../Vista/NuevaPersona.php">Agregar una persona</a></li>
                     </ul>
                     </li>
 
