@@ -1,5 +1,5 @@
 <?php
-include ('conector/BaseDatos.php');
+include_once('conector/BaseDatos.php');
 class Persona{
     private $Nro_dni;
     private $Nombre;
@@ -113,7 +113,6 @@ class Persona{
     public function setMensaje($Mensaje)
     {
         $this->Mensaje = $Mensaje;
-
         return $this;
     }
 
@@ -143,7 +142,7 @@ class Persona{
     }
 
     
-    public static function listar($condicion = ''){
+    public function listar($condicion = ''){
         $array = null;
         $base = new BaseDatos();
         $consulta = "SELECT * FROM persona";
@@ -159,10 +158,10 @@ class Persona{
                     $array[] = $persona;
                 }
             }else{
-                Persona::setMensaje($base->getError());
+                $this->setMensaje($base->getError());
             }
         }else{
-            Persona::setMensaje($base->getError());
+            $this->setMensaje($base->getError());
         }
         return $array;
     }
