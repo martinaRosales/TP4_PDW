@@ -43,7 +43,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../Vista/VerAutos.php">Ver listado de autos</a></li>
                         <li><a class="dropdown-item" href="../Vista/buscarAuto.php">Buscar un auto</a></li>
-                        <li><a class="dropdown-item" href="#">Agregar un auto</a></li>
+                        <li><a class="dropdown-item" href="../Vista/NuevoAuto.php">Agregar un auto</a></li>
                     </ul>
                     </li>
 
