@@ -15,7 +15,7 @@ if(isset($auto,$personaNew)){
 
     $auto[0]->setRDniDuenio($personaNew[0]);
     
-    $datosModificar = ['Patente'=> $auto[0]->getPatente(), 'Marca'=> $auto[0]->getMarca(), 'Modelo' => $auto[0]->getModelo(), 'DniDuenio' => $auto[0]->getRDniDuenio()];
+    $datosModificar = ['Patente'=> $auto[0]->getPatente(), 'Marca'=> $auto[0]->getMarca(), 'Modelo' => $auto[0]->getModelo(), 'DniDuenio' => $personaNew[0]->getNroDni()];
 
     $modificado = $objAuto->modificacion($datosModificar);
    
