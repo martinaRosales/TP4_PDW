@@ -129,4 +129,21 @@ class C_Auto{
         
         return $arreglo;
     }
+
+    public function existePatente($patente){
+        $autosObj=$this->buscar(null);
+        $patentes=[];
+        foreach($autosObj as $auto){
+            array_push($patentes, $auto->getPatente());
+        }
+        $existe=false;
+        $i=0;
+        while(!$existe && $i<count($patentes)){
+            if($patente==$patentes[$i]){
+                $existe=true;
+            }
+            $i++;
+        }
+        return $existe;
+    }
 }
