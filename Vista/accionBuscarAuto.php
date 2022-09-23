@@ -1,12 +1,9 @@
 <?php
-
-include_once('../Control/C_Auto.php');
-include_once('../Util/funciones.php');
 include_once('Common/Header.php');
 
 $datos = data_submitted();
 
-$objAuto = new ControlAuto();
+$objAuto = new C_Auto();
 
 $buscar = $objAuto->buscar($datos);
 ?>
@@ -20,7 +17,11 @@ if(isset($buscar)){
                     <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNroDni().'</td> </tr>
           </table>'; 
 }else{
-    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada<h2>';
+    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada</h2>';
 }
 ?>
+
+<div class="mb-3">
+       <a href= "buscarAuto.php" class="btn btn-primary">Volver</a>
+    </div>
 </div>

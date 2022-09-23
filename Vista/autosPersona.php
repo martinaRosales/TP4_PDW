@@ -1,16 +1,13 @@
 <?php
 include_once 'Common/Header.php';
-//include_once 'Common/Footer.php';
-include_once '../Control/C_Persona.php';
-include_once '../Control/C_Auto.php';
-include_once '../Util/funciones.php';
+
 
 $datos = data_submitted();
 $dniPersona = $datos["dni"][0];
 $param['NroDni'] = $dniPersona;
 $objControladorPersona = new C_Persona();
 $personaDatos = $objControladorPersona->buscar($param);
-$objControladorAuto = new ControlAuto();
+$objControladorAuto = new C_Auto();
 $param['dniDuenio'] = $dniPersona;
 $autosPersona = $objControladorAuto->buscar($param);
 if ($autosPersona != null) {

@@ -1,25 +1,20 @@
 <?php
-
 include_once('Common/Header.php');
-include_once('../Modelo/Auto.php');
-include_once('../Modelo/Persona.php');
-
 ?>
 
 <!-- container -->
 <div  class="container-fluid">
     
     <!-- container formulario -->
-    <div class="container col-md-5" style="margin:30px;height: 150vh;">
-        <h2>Ejercicio 4</h2>
-        <h3>Buscar Auto</h3>
+    <div class="container col-md-5" style="margin:50px;height:200px;">
+        <h2>Buscar Auto</h2>
 
         <form class="needs-validation" novalidate id="form_patente" name="form_patente" method="post" action="accionBuscarAuto.php">
     
         <!-- cont input -->
         <div class="mb-3">
         <label for="" class="form-label">Ingrese número de patente del auto: </label>
-        <input type="text" class="form-control" id="patente" name="patente" min="0" required>
+        <input type="text" class="form-control" id="Patente" name="Patente" min="0" required>
 
             <!-- invalid feedback -->
             <div class="invalid-feedback">

@@ -165,6 +165,7 @@ class Auto
         } else {
             $this->setMensaje($base->getError());
         }
+        return $resp;
     }
 
     //MODIFICAR
@@ -186,6 +187,7 @@ class Auto
         } else {
             $this->setMensaje($base->getError());
         }
+        return $resp;
     }
 
     //ELIMINAR

@@ -3,27 +3,28 @@ include_once('Common/Header.php');
 ?>
 
 <div class="container-fluid">
-
-    <h1>Agregar Persona</h1>
+    <div class="text-center">
+        <h1>Agregar Persona</h1>
+    </div>
 
     <form action="accionNuevaPersona.php" class="needs-validation m-3" novalidate id="form-nuevaPersona" name="form-nuevaPersona" method="post">
-        <div class="row gap-2 justify-content-center">
+        <div class="row gap-2 justify-content-center my-5">
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" minlength="5" pattern="[a-zA-Z ]{5,30}">
+                <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre" required pattern="[a-zA-Z ]{5,30}">
                 <label for="floatingInput">Nombre</label>
                 <div class="invalid-feedback">
                     Debe ingresar mas de 5 caracteres y solamente letras.
                 </div>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" minlength="5" pattern="[a-zA-Z ]{5,30}">
+                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" required pattern="[a-zA-Z ]{5,30}">
                 <div class="invalid-feedback">
                     Debe ingresar mas de 5 caracteres y solamente letras.
                 </div>
                 <label for="floatingInput">Apellido</label>
             </div>
             <div class="form-floating col-3">
-                <input type="number" class="form-control" id="NroDni" name="NroDni" placeholder="Numero Documento" min="00000000" max="99999999" required >
+                <input type="text" class="form-control" id="NroDni" name="NroDni" placeholder="Numero Documento" required pattern="[0-9]{8}"  >
                 <label for="floatingInput">Documento</label>
                 <div class="invalid-feedback">
                     Debe ingresar un documento.
@@ -44,8 +45,7 @@ include_once('Common/Header.php');
             </div>
         </div>
 
-        <div>
-
+        <div class="text-center">
             <button class="btn btn-secondary" type="reset">Borrar</button>
             <button class="btn btn-primary" type="Submit">Enviar</button>
         </div>

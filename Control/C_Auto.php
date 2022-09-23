@@ -1,7 +1,7 @@
 <?php
 include_once '../Modelo/Auto.php';
 
-class ControlAuto{
+class C_Auto{
 
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
@@ -10,13 +10,13 @@ class ControlAuto{
      */
     private function cargarObjeto($param){
         $obj = null;
-        if(array_key_exists('patente',$param) ){
+        if(array_key_exists('Patente',$param) ){
 
             $obj=New Auto();
-            $obj->cargar($param['patente'], 
-            $param['marca'],
-            $param['modelo'],
-            $param['dniDuenio']);
+            $obj->cargar($param['Patente'], 
+            $param['Marca'],
+            $param['Modelo'],
+            $param['DniDuenio']);
         }
         return $obj;
     }
@@ -31,7 +31,7 @@ class ControlAuto{
         $obj = null;
         if( isset($param['id']) ){
             $obj = new Auto();
-            $obj->cargar($param['patente'], null, null, null, null);
+            $obj->cargar($param['Patente'], null, null, null, null);
         }
         return $obj;
     }
@@ -44,7 +44,7 @@ class ControlAuto{
     
     private function seteadosCamposClaves($param){
         $resp = false;
-        if (isset($param['patente']))
+        if (isset($param['Patente']))
             $resp = true;
         return $resp;
     }
@@ -89,8 +89,9 @@ class ControlAuto{
     public function modificacion($param){
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
+            
             $objAuto = $this->cargarObjeto($param);
-            if($objAuto!=null and $objAuto->modificar()){
+            if($objAuto!=null && $objAuto->modificar()){
                 $resp = true;
             }
         }
@@ -106,14 +107,14 @@ class ControlAuto{
         $where = " true "; 
         if ($param<>NULL){
             $where .= '';
-            if  (isset($param['patente']))
-                $where.=" and Patente ='".$param['patente']."'"; 
-            if  (isset($param['marca']))
-                    $where.=" and Marca ='".$param['marca']."'";
-            if  (isset($param['modelo']))
-                    $where.=" and Modelo ='".$param['modelo'] ."'";
-            if  (isset($param['dniDuenio']))
-                    $where.=" and DniDuenio =".$param['dniDuenio'];
+            if  (isset($param['Patente']))
+                $where.=" and Patente ='".$param['Patente']."'"; 
+            if  (isset($param['Marca']))
+                    $where.=" and Marca ='".$param['Marca']."'";
+            if  (isset($param['Modelo']))
+                    $where.=" and Modelo ='".$param['Modelo'] ."'";
+            if  (isset($param['DniDuenio']))
+                    $where.=" and DniDuenio =".$param['DniDuenio'];
         }
         $objAuto = new Auto();
         $arreglo =  $objAuto->listar($where);  
