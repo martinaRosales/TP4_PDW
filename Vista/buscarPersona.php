@@ -3,7 +3,7 @@ include_once 'Common/Header.php';
 
 
 $objControlPersona=new C_Persona();
-$arrayPersonas=$objControlPersona->buscar(NULL);
+$objPersonas=$objControlPersona->buscar(NULL);
 $cantPersonas=count($arrayPersonas);
 ?>
 
@@ -16,8 +16,8 @@ $cantPersonas=count($arrayPersonas);
         <?php 
             $i=0;
             while ($i<$cantPersonas){
-                echo "<option value=".$arrayPersonas[$i]->getNroDni().">"
-                        .$arrayPersonas[$i]->getNroDni()."</option>";
+                echo "<option value=".$objPersonas[$i]->getNroDni().">"
+                        .$objPersonas[$i]->getNroDni()."</option>";
                 $i++;
             }
         ?>
