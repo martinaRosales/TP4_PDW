@@ -1,5 +1,5 @@
 <?php
-include_once('../configuracion.php');
+include_once('../../configuracion.php');
 ?>
 
 <!DOCTYPE html>
@@ -31,12 +31,7 @@ include_once('../configuracion.php');
     <div>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-<<<<<<< HEAD
             <a class="navbar-brand" href="../Vista/Index.php"><img style="width: 50px;height: 50px;" src="Assets/Img/logoSitio.png" alt=""></a>
-=======
-                <a class="navbar-brand" href="../Vista/Index.php">
-                <img style="width: 50px;height: 50px;" src="Assets/Img/logoSitio.svg" alt=""></a>
->>>>>>> b1e86fb6300581eb7714395012897de31e5cbcc5
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
