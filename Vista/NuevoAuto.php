@@ -26,7 +26,7 @@ include_once('Common/Header.php');
                     Todo correcto!
                 </div>
                 <div class="form-floating col-3">
-                <input type="number" class="form-control" id="dniDuenio" name="dniDuenio" placeholder="Numero Documento del dueño" required>
+                <input type="number" class="form-control" id="DniDuenio" name="DniDuenio" placeholder="Numero Documento del dueño" required>
                 <label for="floatingInput">Documento del dueño</label>
                 <div class="invalid-feedback">
                     Debe ingresar un documento.
