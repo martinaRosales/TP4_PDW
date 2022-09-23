@@ -123,7 +123,7 @@ class C_Persona{
             if  (isset($param['Telefono']))
                 $where.=" and Telefono=".$param['Telefono'];
             if  (isset($param['Domicilio']))
-                 $where.=" and Domicilio='".$param['Domicilio']."'";
+                $where.=" and Domicilio='".$param['Domicilio']."'";
         }
         $objPersona = new Persona();
         $arreglo = $objPersona->listar($where);  
