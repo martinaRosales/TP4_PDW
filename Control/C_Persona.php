@@ -132,7 +132,3 @@ class C_Persona{
         
     }
 }
-
-
-
-?>
