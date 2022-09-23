@@ -8,13 +8,14 @@ $param['NroDni'] = $dniPersona;
 $objControladorPersona = new C_Persona();
 $personaDatos = $objControladorPersona->buscar($param);
 $objControladorAuto = new C_Auto();
-$param['dniDuenio'] = $dniPersona;
+$param['DniDuenio'] = $dniPersona;
 $autosPersona = $objControladorAuto->buscar($param);
 if ($autosPersona != null) {
   $cantAutos = count($autosPersona);
 } else {
   $cantAutos = -1;
 }
+
 
 ?>
 
