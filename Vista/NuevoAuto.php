@@ -10,40 +10,40 @@ include_once('Common/Header.php');
     <form action="accionNuevoAuto.php" class="needs-validation m-3" novalidate id="form-nuevoAuto" name="form-nuevoAuto" method="post">
         <div class="row gap-2 justify-content-center">
             <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Marca" name="Marca" placeholder="Marca" required>
+                <input type="text" class="form-control" id="Marca" name="Marca" pattern="[a-z,A-Z,0-9]{3,20}$" required>
                 <label for="floatingInput">Marca</label>
-            </div>
                 <div class="invalid-feedback">
                     Debe ingresar una Marca.
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
                 </div>
-            <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Modelo" name="Modelo" placeholder="Modelo" required>
-                <label for="floatingInput">Modelo</label>
             </div>
-            <div class="invalid-feedback">
-                    Debe ingresar un Modelo.
+            <div class="form-floating col-6 col-lg-4">
+                <input type="text" class="form-control" id="Modelo" name="Modelo" pattern="[0-9]{1,10}" required>
+                <label for="floatingInput">Modelo</label>
+                <div class="invalid-feedback">
+                    Debe ingresar un Modelo válido.
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
                 </div>
+            </div>
             <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Patente" name="Patente" placeholder="Patente" required>
+                <input type="text" class="form-control" id="Patente" name="Patente" pattern="[a-z,A-Z,0-9]{3,10}$" required>
                 <label for="floatingInput">Patente</label>
                 <div class="invalid-feedback">
-                    Debe ingresar una patente.
+                    Debe ingresar una patente válida.
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
                 </div>
             </div>
                 <div class="form-floating col-6 col-lg-4">
-                <input type="number" class="form-control" id="DniDuenio" name="DniDuenio" placeholder="Numero Documento del dueño" required>
+                <input type="text" class="form-control" id="DniDuenio" name="DniDuenio" pattern="[0-9]{3,10}$" required>
                 <label for="floatingInput">Documento del dueño</label>
                 <div class="invalid-feedback">
-                    Debe ingresar un documento valido.
+                    Debe ingresar un documento valido (solo números hasta 11 carácteres).
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
