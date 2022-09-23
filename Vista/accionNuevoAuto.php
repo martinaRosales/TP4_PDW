@@ -5,15 +5,11 @@ $datos = data_submitted();
 $dni=$datos['DniDuenio'];
 $objControlPersona=new C_Persona();
 $existeDni=$objControlPersona->existeDni($dni);
-//echo $existeDni?"SI":"NO";
 $objControlAuto = new C_Auto();
 ?>
 <div class="container-md m-5">
     <?php 
         if($existeDni){
-            $param['NroDni']=$dni;
-            $personaObj=$objControlPersona->buscar($param);
-            $datos['DniDuenio']=$personaObj[0];
             $exito = $objControlAuto->alta($datos); 
             if($exito){
                 ?>
