@@ -7,22 +7,22 @@ $objControlPersona=new C_Persona();
 $existeDni=$objControlPersona->existeDni($dni);
 $objControlAuto = new C_Auto();
 ?>
-<div class="container-md m-5">
+<div class="container-md m-5 justify-content-center" style="display:flex">
     <?php 
         if($existeDni){
             $exito = $objControlAuto->alta($datos); 
             if($exito){
                 ?>
-                <div class="w-50">
-                <div class="card bg-success">
+                <div class="w-50 text-center">
+                <div class="alert alert-success">
                     Nuevo auto cargado con exito.
                 </div>
                 </div>
                 <?php
             } else {
                 ?>
-                <div class="w-50">
-                <div class="card bg-danger">
+                <div class="w-50 text-center">
+                <div class="alert alert-warning">
                     No se pudo cargar el auto.
                 </div>
                 </div>
@@ -30,12 +30,12 @@ $objControlAuto = new C_Auto();
             }
         }else{
             ?>
-            <div class="w-50">
+            <div class="w-50 text-center">
             <div class="alert alert-warning" role="alert">
                 No existe la persona con el dni ingresado. Si desea crear un nuevo registro de persona, haga click en el siguiente botón.
-                También puede ver <a href="">aquí</a> las personas registradas.
+                También puede ver <a href="listaPersonas.php">aquí</a> las personas registradas.
                 </div>
-                <button type="button" class="btn btn-primary" href="">CREAR PERSONA</button>
+                <a type="button" class="btn btn-primary" href="NuevaPersona.php">CREAR PERSONA</a>
             </div>
             <?php
         }
