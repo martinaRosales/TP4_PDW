@@ -4,7 +4,7 @@ include_once 'Common/Header.php';
 
 $objControlPersona=new C_Persona();
 $objPersonas=$objControlPersona->buscar(NULL);
-$cantPersonas=count($arrayPersonas);
+$cantPersonas=count($objPersonas);
 ?>
 
 <div class="container-md my-4">
