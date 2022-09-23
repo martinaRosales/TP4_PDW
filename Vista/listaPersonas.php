@@ -62,7 +62,6 @@ $cantPersonas=count($arrayPersonas);
       </form >
     </div>
 </div>
-<script type="text/javascript" src="Assets/Javascript/verPersonas.js"></script>
 
 <?php
 include_once('Common/Footer.php');

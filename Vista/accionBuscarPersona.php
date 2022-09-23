@@ -83,4 +83,4 @@ $personaDatos=$objControladorPersona->buscar($param);
             
             </form>
 </div>
-<script type="text/javascript" src="../Vista/Assets/Javascript/validarPersona.js"></script>
+<script type="text/javascript" src="../Vista/Assets/Javascript/validarRequeridos.js"></script>
