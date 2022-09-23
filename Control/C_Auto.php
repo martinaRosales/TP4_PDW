@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 include_once '../Modelo/Auto.php';
 
 class C_Auto{
@@ -12,11 +15,16 @@ class C_Auto{
         $obj = null;
         if(array_key_exists('Patente',$param) ){
 
+            //Busco el objeto dueño que coincida el dni
+            $objDuenio = new C_Persona();
+            $objPrueba = $objDuenio->buscar(['NroDni'=>$param['DniDuenio']])[0];
+            //echo gettype($objPrueba);
             $obj=New Auto();
             $obj->cargar($param['Patente'], 
             $param['Marca'],
             $param['Modelo'],
-            $param['DniDuenio']);
+            //$param['DniDuenio']);
+            $objPrueba);
         }
         return $obj;
     }
