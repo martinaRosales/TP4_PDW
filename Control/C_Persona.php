@@ -141,7 +141,7 @@ class C_Persona{
         $existe=false;
         $i=0;
         while(!$existe && $i<count($dniPersonas)){
-            if($dni==$dniPersonas){
+            if($dni==$dniPersonas[$i]){
                 $existe=true;
             }
             $i++;
