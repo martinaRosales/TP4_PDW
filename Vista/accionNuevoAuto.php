@@ -6,27 +6,39 @@ $dni=$datos['DniDuenio'];
 $objControlPersona=new C_Persona();
 $existeDni=$objControlPersona->existeDni($dni);
 $objControlAuto = new C_Auto();
+$existePatente=$objControlAuto->$existePatente($datos['Patente']);
 ?>
 <div class="container-md m-5 justify-content-center" style="display:flex">
     <?php 
         if($existeDni){
-            $exito = $objControlAuto->alta($datos); 
-            if($exito){
+            if(!$existePatente){
+                $exito = $objControlAuto->alta($datos); 
+                if($exito){
+                    ?>
+                    <div class="w-50 text-center">
+                    <div class="alert alert-success">
+                        Nuevo auto cargado con exito.
+                    </div>
+                    </div>
+                    <?php
+                } else {
+                    ?>
+                    <div class="w-50 text-center">
+                    <div class="alert alert-warning">
+                        No se pudo cargar el auto.
+                    </div>
+                    </div>
+                    <?php
+                }
+            }else{
                 ?>
-                <div class="w-50 text-center">
-                <div class="alert alert-success">
-                    Nuevo auto cargado con exito.
-                </div>
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="w-50 text-center">
-                <div class="alert alert-warning">
-                    No se pudo cargar el auto.
-                </div>
-                </div>
-                <?php
+                    <div class="w-50 text-center">
+                    <div class="alert alert-warning">
+                        La patente ingresada ya existe! Si desea cambiar el dueño, haga click en el botón siguiente.
+                    </div>
+                    <a type="button" class="btn btn-primary" href="NuevaPersona.php">CAMBIAR DUEÑO</a>
+                    </div>
+                    <?php
             }
         }else{
             ?>
