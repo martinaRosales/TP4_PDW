@@ -131,6 +131,23 @@ class C_Persona{
             
         
     }
+
+    public function existeDni($dni){
+        $personasObj=$this->buscar(null);
+        $dniPersonas=[];
+        foreach($personasObj as $persona){
+            array_push($dniPersonas, $persona->getNroDni());
+        }
+        $existe=false;
+        $i=0;
+        while(!$existe && $i<count($dniPersonas)){
+            if($dni==$dniPersonas){
+                $existe=true;
+            }
+            $i++;
+        }
+        return $existe;
+    }
 }
 
 
