@@ -149,7 +149,3 @@ class C_Persona{
         return $existe;
     }
 }
-
-
-
-?>
