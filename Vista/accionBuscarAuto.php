@@ -17,7 +17,7 @@ if(isset($buscar)){
                     <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNroDni().'</td> </tr>
           </table>'; 
 }else{
-    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada<h2>';
+    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada</h2>';
 }
 ?>
 
