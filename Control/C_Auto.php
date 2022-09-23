@@ -16,7 +16,7 @@ class C_Auto{
             $obj->cargar($param['Patente'], 
             $param['Marca'],
             $param['Modelo'],
-            $param['dniDuenio']);
+            $param['DniDuenio']);
         }
         return $obj;
     }
@@ -31,7 +31,7 @@ class C_Auto{
         $obj = null;
         if( isset($param['id']) ){
             $obj = new Auto();
-            $obj->cargar($param['patente'], null, null, null, null);
+            $obj->cargar($param['Patente'], null, null, null, null);
         }
         return $obj;
     }
@@ -44,7 +44,7 @@ class C_Auto{
     
     private function seteadosCamposClaves($param){
         $resp = false;
-        if (isset($param['patente']))
+        if (isset($param['Patente']))
             $resp = true;
         return $resp;
     }
@@ -89,8 +89,9 @@ class C_Auto{
     public function modificacion($param){
         $resp = false;
         if ($this->seteadosCamposClaves($param)){
+            
             $objAuto = $this->cargarObjeto($param);
-            if($objAuto!=null and $objAuto->modificar()){
+            if($objAuto!=null && $objAuto->modificar()){
                 $resp = true;
             }
         }
@@ -106,14 +107,14 @@ class C_Auto{
         $where = " true "; 
         if ($param<>NULL){
             $where .= '';
-            if  (isset($param['patente']))
-                $where.=" and Patente ='".$param['patente']."'"; 
-            if  (isset($param['marca']))
-                    $where.=" and Marca ='".$param['marca']."'";
-            if  (isset($param['modelo']))
-                    $where.=" and Modelo ='".$param['modelo'] ."'";
-            if  (isset($param['dniDuenio']))
-                    $where.=" and DniDuenio =".$param['dniDuenio'];
+            if  (isset($param['Patente']))
+                $where.=" and Patente ='".$param['Patente']."'"; 
+            if  (isset($param['Marca']))
+                    $where.=" and Marca ='".$param['Marca']."'";
+            if  (isset($param['Modelo']))
+                    $where.=" and Modelo ='".$param['Modelo'] ."'";
+            if  (isset($param['DniDuenio']))
+                    $where.=" and DniDuenio =".$param['DniDuenio'];
         }
         $objAuto = new Auto();
         $arreglo =  $objAuto->listar($where);  
