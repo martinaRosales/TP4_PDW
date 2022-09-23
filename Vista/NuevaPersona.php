@@ -53,7 +53,7 @@ include_once('Common/Header.php');
 
 
 </div>
-<script src="Assets/Javascript/validarPersona.js"></script>
+<script src="Assets/Javascript/validarRequeridos.js"></script>
 <?php
 include_once('Common/Footer.php');
 ?>
