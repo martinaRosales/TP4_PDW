@@ -23,7 +23,7 @@ include_once('Common/Header.php');
                 <input type="text" class="form-control" id="Modelo" name="Modelo" pattern="[0-9]{1,10}" required>
                 <label for="floatingInput">Modelo</label>
                 <div class="invalid-feedback">
-                    Debe ingresar un Modelo válido.
+                Debe ingresar un modelo valido (solo números hasta 11 carácteres).
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
@@ -33,7 +33,7 @@ include_once('Common/Header.php');
                 <input type="text" class="form-control" id="Patente" name="Patente" pattern="[a-z,A-Z,0-9]{3,10}$" required>
                 <label for="floatingInput">Patente</label>
                 <div class="invalid-feedback">
-                    Debe ingresar una patente válida.
+                    Debe ingresar una patente válida (solo números y letras hasta 10 carácteres)
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
@@ -43,7 +43,7 @@ include_once('Common/Header.php');
                 <input type="text" class="form-control" id="DniDuenio" name="DniDuenio" pattern="[0-9]{3,10}$" required>
                 <label for="floatingInput">Documento del dueño</label>
                 <div class="invalid-feedback">
-                    Debe ingresar un documento valido (solo números hasta 11 carácteres).
+                    Debe ingresar un documento valido (solo números hasta 10 carácteres).
                 </div>
                 <div class="valid-feedback">
                     Todo correcto!
