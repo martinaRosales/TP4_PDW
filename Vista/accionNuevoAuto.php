@@ -6,7 +6,7 @@ $dni=$datos['DniDuenio'];
 $objControlPersona=new C_Persona();
 $existeDni=$objControlPersona->existeDni($dni);
 $objControlAuto = new C_Auto();
-$existePatente=$objControlAuto->$existePatente($datos['Patente']);
+$existePatente=$objControlAuto->existePatente($datos['Patente']);
 ?>
 <div class="container-md m-5 justify-content-center" style="display:flex">
     <?php 
@@ -36,7 +36,7 @@ $existePatente=$objControlAuto->$existePatente($datos['Patente']);
                     <div class="alert alert-warning">
                         La patente ingresada ya existe! Si desea cambiar el dueño, haga click en el botón siguiente.
                     </div>
-                    <a type="button" class="btn btn-primary" href="NuevaPersona.php">CAMBIAR DUEÑO</a>
+                    <a type="button" class="btn btn-primary" href="cambiarDuenio.php">CAMBIAR DUEÑO</a>
                     </div>
                     <?php
             }
