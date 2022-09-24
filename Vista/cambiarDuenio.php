@@ -16,7 +16,7 @@ include_once('Common/Header.php');
         <!-- cont input patente-->
         <div class="mb-4">
         <label for="" class="form-label">Ingrese número de patente del auto: </label>
-        <input type="text" class="form-control" id="Patente" name="Patente" min="0" minlength='6' maxlength='7' required>
+        <input type="text" class="form-control" id="Patente" name="Patente" minlength='6' maxlength='7' required>
 
             <!-- invalid feedback -->
             <div class="invalid-feedback">
@@ -36,7 +36,7 @@ include_once('Common/Header.php');
         <!-- cont input doc-->
         <div class="mb-3">
         <label for="" class="form-label">Ingrese dni del dueño nuevo: </label>
-        <input type="text" class="form-control" id="NroDni" name="NroDni" min="0" minlength='7' maxlength='15' required>
+        <input type="text" pattern="[0-9]{8}" class="form-control" id="NroDni" name="NroDni" min="0" minlength='7' maxlength='15' required>
 
             <!-- invalid feedback -->
             <div class="invalid-feedback">
@@ -61,7 +61,7 @@ include_once('Common/Header.php');
 
         </form>
 
-        <script src="Assets/Javascript/buscarAuto.js"></script>
+        <script src="Assets/Javascript/validarRequeridos.js"></script>
 
     </div>
     <!-- container formulario -->

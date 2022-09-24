@@ -211,9 +211,4 @@ class Auto
         }
         return $rta;
     }
-<<<<<<< HEAD
-    }
-
-=======
 }
->>>>>>> cf91e10e057f383fa43bc5d7e00be80dee7a4524
