@@ -2,7 +2,7 @@
 include_once('Common/Header.php');
 ?>
 
-<div class="container-md justify-content-center">
+<div class="container-md justify-content-center" style="height: 80vh;">
     <div class="text-center mt-3">
         <h1>Agregar Auto</h1>
     </div>
