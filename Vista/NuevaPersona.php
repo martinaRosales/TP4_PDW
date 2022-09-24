@@ -2,7 +2,7 @@
 include_once('Common/Header.php');
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid" style="height: 80vh;">
     <div class="text-center">
         <h1>Agregar Persona</h1>
     </div>
