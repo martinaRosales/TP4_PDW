@@ -107,7 +107,7 @@ class C_Persona{
     /**
      * permite buscar un objeto
      * @param array $param
-     * @return boolean
+     * @return array
      */
     public function buscar($param){
         $where = " true ";
@@ -123,7 +123,7 @@ class C_Persona{
             if  (isset($param['Telefono']))
                 $where.=" and Telefono=".$param['Telefono'];
             if  (isset($param['Domicilio']))
-                 $where.=" and Domicilio='".$param['Domicilio']."'";
+                $where.=" and Domicilio='".$param['Domicilio']."'";
         }
         $objPersona = new Persona();
         $arreglo = $objPersona->listar($where);  
@@ -131,8 +131,21 @@ class C_Persona{
             
         
     }
+
+    public function existeDni($dni){
+        $personasObj=$this->buscar(null);
+        $dniPersonas=[];
+        foreach($personasObj as $persona){
+            array_push($dniPersonas, $persona->getNroDni());
+        }
+        $existe=false;
+        $i=0;
+        while(!$existe && $i<count($dniPersonas)){
+            if($dni==$dniPersonas[$i]){
+                $existe=true;
+            }
+            $i++;
+        }
+        return $existe;
+    }
 }
-
-
-
-?>

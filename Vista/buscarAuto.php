@@ -39,7 +39,7 @@ include_once('Common/Header.php');
 
         </form>
 
-        <script src="Assets/Javascript/buscarAuto.js"></script>
+        <script src="Assets/Javascript/validarRequeridos.js"></script>
 
     </div>
     <!-- container formulario -->

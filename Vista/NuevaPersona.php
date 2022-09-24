@@ -2,7 +2,7 @@
 include_once('Common/Header.php');
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid" style="height: 80vh;">
     <div class="text-center">
         <h1>Agregar Persona</h1>
     </div>
@@ -53,7 +53,7 @@ include_once('Common/Header.php');
 
 
 </div>
-<script src="Assets/Javascript/validarPersona.js"></script>
+<script src="Assets/Javascript/validarRequeridos.js"></script>
 <?php
 include_once('Common/Footer.php');
 ?>

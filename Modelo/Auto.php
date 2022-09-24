@@ -123,13 +123,13 @@ class Auto
         $array = null;
         $base = new BaseDatos();
         $sql =  "select * from auto";
-        if($condicion != ''){
-            $sql = $sql.' where '.$condicion;
+        if ($condicion != '') {
+            $sql = $sql . ' where ' . $condicion;
         }
-        if($base->Iniciar()){
-            if($base->Ejecutar($sql)){
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
                 $array = array();
-                while($row2 = $base->Registro()){
+                while ($row2 = $base->Registro()) {
                     $objAuto = new Auto();
                     $objAuto->buscar($row2['Patente']);
                     $array[] = $objAuto;
@@ -140,24 +140,27 @@ class Auto
         } else {
             $this->setMensaje($base->getError());
         }
-        
+
         return $array;
     }
 
     //INSERTAR
-    public function insertar(){
+    public function insertar()
+    {
         $base = new BaseDatos();
         $resp = false;
         //Asigno los datos a variables
         $patente = $this->getPatente();
         $marca = $this->getMarca();
         $modelo = $this->getModelo();
-        $duenio = $this->getRDniDuenio();
+        $duenio = $this->getRDniDuenio(); //Se esta guardando el dni, no el objeto
         $dniDuenio = $duenio->getNroDni();
+
         //Creo la consulta 
-        $sql = "INSERT INTO auto (Patente, Marca, Modelo, DniDuenio) VALUES ('{$patente}', '{$marca}'. '{$modelo}', '{$dniDuenio}')";
-        if($base->Iniciar()){
-            if($base->Ejecutar($sql)){
+        $sql = "INSERT INTO auto (Patente, Marca, Modelo, DniDuenio) VALUES ('{$patente}', '{$marca}', '{$modelo}', '{$dniDuenio}')";
+        if ($base->Iniciar()) {
+
+            if ($base->Ejecutar($sql)) {
                 $resp = true;
             } else {
                 $this->setMensaje($base->getError());
@@ -169,7 +172,8 @@ class Auto
     }
 
     //MODIFICAR
-    public function modificar(){
+    public function modificar()
+    {
         $base = new BaseDatos();
         $resp = false;
         $patente = $this->getPatente();
@@ -178,8 +182,8 @@ class Auto
         $duenio = $this->getRDniDuenio();
         $dniDuenio = $duenio->getNroDni();
         $sql = "UPDATE auto SET Marca = '{$marca}', Modelo = '{$modelo}', DniDuenio = '{$dniDuenio}' WHERE Patente = '{$patente}'";
-        if($base->Iniciar()){
-            if($base->Ejecutar($sql)){
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
                 $resp = true;
             } else {
                 $this->setMensaje($base->getError());
@@ -207,5 +211,9 @@ class Auto
         }
         return $rta;
     }
+<<<<<<< HEAD
     }
 
+=======
+}
+>>>>>>> cf91e10e057f383fa43bc5d7e00be80dee7a4524

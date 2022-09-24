@@ -3,7 +3,7 @@
 
     <!-- Copyright -->
     <div class="container">
-        <div class="footer-copyright text-center py-3">Equipo Alfa Buena Onda :)
+        <div class="footer-copyright text-center py-3 text-light">Equipo Alfa Buena Onda :)
         </div>
     </div>
     

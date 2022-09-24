@@ -14,6 +14,7 @@ if(isset($buscar)){
     echo '<table class="table table-primary table-striped table-bordered " > <tr> <th> <h3>Patente:</h3> </th> <td>'.$buscar[0]->getPatente().'</td> </tr>
                     <tr> <th > <h3>Marca:</h3> </th> <td>'.$buscar[0]->getMarca().'</td> </tr>
                     <tr> <th> <h3>Modelo:</h3> </th> <td>'.$buscar[0]->getModelo().'</td> </tr>
+                    <tr> <th> <h3>Nombre del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNombre(). " " . $buscar[0]->getRDniDuenio()->getApellido() .'</td> </tr>
                     <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNroDni().'</td> </tr>
           </table>'; 
 }else{
