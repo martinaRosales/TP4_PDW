@@ -36,7 +36,7 @@ include_once('Common/Header.php');
         <!-- cont input doc-->
         <div class="mb-3">
         <label for="" class="form-label">Ingrese dni del dueño nuevo: </label>
-        <input type="text" class="form-control" id="NroDni" name="NroDni" min="0" minlength='7' maxlength='20' required>
+        <input type="text" class="form-control" id="NroDni" name="NroDni" min="0" minlength='7' maxlength='15' required>
 
             <!-- invalid feedback -->
             <div class="invalid-feedback">
