@@ -30,7 +30,7 @@ include_once('Common/Header.php');
                 </div>
             </div>
             <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Patente" name="Patente" pattern="[a-z,A-Z,0-9]{3,10}$" required>
+                <input type="text" class="form-control" id="Patente" name="Patente" pattern="[a-z,A-Z, ,0-9]{3,10}$" required>
                 <label for="floatingInput">Patente</label>
                 <div class="invalid-feedback">
                     Debe ingresar una patente válida (solo números y letras hasta 10 carácteres)
