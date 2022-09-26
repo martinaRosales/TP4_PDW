@@ -17,7 +17,7 @@ include_once('Common/Header.php');
                 </div>
             </div>
             <div class="form-floating col-3">
-                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" required pattern="[a-zA-Z ]{5,30}">
+                <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Apellido" required pattern="[a-zA-Z ]{3,30}">
                 <div class="invalid-feedback">
                     Debe ingresar mas de 5 caracteres y solamente letras.
                 </div>
