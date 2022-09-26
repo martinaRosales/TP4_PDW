@@ -18,7 +18,7 @@ if(isset($buscar)){
                     <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$buscar[0]->getRDniDuenio()->getNroDni().'</td> </tr>
           </table>'; 
 }else{
-    echo '<h2>No se ha encontrado el auto correspondiente a la patente ingresada</h2>';
+    echo '<h2 class="alert alert-danger" role="alert">No se ha encontrado el auto correspondiente a la patente ingresada</h2>';
 }
 ?>
 
@@ -26,3 +26,5 @@ if(isset($buscar)){
        <a href= "buscarAuto.php" class="btn btn-primary">Volver</a>
     </div>
 </div>
+
+<?php include_once('Common/Footer.php'); ?>

@@ -49,8 +49,8 @@ include_once('Common/Header.php');
                     $fecha = $anio."-".$mes."-".$dia;
                 ?>
 
-                <input type="date" max="<?php echo $fecha ?>" class="form-control" name="fechaNac" id="fechaNac">
-                <label for="floatingInput">Fecha Nacimiento</label>
+            <input type="date" max="<?php echo $fecha ?>" class="form-control" name="fechaNac" id="fechaNac">
+            <label for="floatingInput">Fecha Nacimiento</label>
             </div>
             <div class="form-floating col-3">
                 <input type="number" class="form-control" id="Telefono" name="Telefono" placeholder="Numero Telefono">

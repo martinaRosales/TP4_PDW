@@ -27,10 +27,10 @@ if(isset($auto,$personaNew)){
         <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$auto[0]->getRDniDuenio()->getNroDni().'</td> </tr>
 </table>'; 
     }else{
-        echo '<h2>No se ha podido realizar la modificación</h2>';
+        echo '<h2  class="alert alert-danger" role="alert">No se ha podido realizar la modificación</h2>';
     }
 }else{
-    echo '<h2>No se ha encontrado el auto o la persona ingresada</h2>';
+    echo '<h2  class="alert alert-danger" role="alert">No se ha encontrado el auto o la persona ingresada</h2>';
 }
 ?>
 
@@ -39,3 +39,5 @@ if(isset($auto,$personaNew)){
        <a href= "cambiarDuenio.php" class="btn btn-primary">Volver</a>
     </div>
 </div>
+
+<?php include_once('Common/Footer.php'); ?>
