@@ -32,7 +32,24 @@ include_once('Common/Header.php');
                 
             </div>
             <div class="form-floating col-3">
-                <input type="date" class="form-control" name="fechaNac" id="fechaNac">
+
+                <?php 
+                $anio = getdate()['year'];
+                    if(9 >= getdate()['mon']){
+                        $mes = "0".getdate()['mon'];
+                    }else{
+                        $mes = getdate()['mon'];
+                    }
+                    if(9 >= getdate()['mday']){
+                    $dia = "0".getdate()['mday'];
+                    }else{
+                    $dia = getdate()['mday']; 
+                    }
+
+                    $fecha = $anio."-".$mes."-".$dia;
+                ?>
+
+                <input type="date" max="<?php echo $fecha ?>" class="form-control" name="fechaNac" id="fechaNac">
                 <label for="floatingInput">Fecha Nacimiento</label>
             </div>
             <div class="form-floating col-3">
