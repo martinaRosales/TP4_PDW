@@ -14,7 +14,7 @@ include_once('Common/Header.php');
         <!-- cont input -->
         <div class="mb-3">
         <label for="" class="form-label">Ingrese número de patente del auto: </label>
-        <input type="text" class="form-control" minlength='6' id="Patente" name="Patente" min="0" required>
+        <input type="text" class="form-control" minlength='6' pattern="[A-Z]{3}\s[0-9]{3}" id="Patente" name="Patente" min="0" required>
 
             <!-- invalid feedback -->
             <div class="invalid-feedback">

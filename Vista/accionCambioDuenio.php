@@ -25,7 +25,7 @@ if(isset($auto,$personaNew)){
         <tr> <th > <h3>Marca:</h3> </th> <td>'.$auto[0]->getMarca().'</td> </tr>
         <tr> <th> <h3>Modelo:</h3> </th> <td>'.$auto[0]->getModelo().'</td> </tr>
         <tr> <th> <h3>Dni del duenio:</h3>  </th> <td>'.$auto[0]->getRDniDuenio()->getNroDni().'</td> </tr>
-</table>'; ;
+</table>'; 
     }else{
         echo '<h2>No se ha podido realizar la modificación</h2>';
     }
@@ -35,6 +35,7 @@ if(isset($auto,$personaNew)){
 ?>
 
 <div class="mb-3">
+    
        <a href= "cambiarDuenio.php" class="btn btn-primary">Volver</a>
     </div>
 </div>

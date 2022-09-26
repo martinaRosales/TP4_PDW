@@ -10,7 +10,7 @@ include_once('Common/Header.php');
     <form action="accionNuevoAuto.php" class="needs-validation m-3" novalidate id="form-nuevoAuto" name="form-nuevoAuto" method="post">
         <div class="row gap-2 justify-content-center">
             <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Marca" name="Marca" pattern="[a-z,A-Z,0-9]{3,20}$" required>
+                <input type="text" class="form-control" id="Marca" name="Marca"  pattern="[a-zA-Z]+\s?[a-zA-Z]*" required>
                 <label for="floatingInput">Marca</label>
                 <div class="invalid-feedback">
                     Debe ingresar una Marca.
@@ -30,7 +30,7 @@ include_once('Common/Header.php');
                 </div>
             </div>
             <div class="form-floating col-6 col-lg-4">
-                <input type="text" class="form-control" id="Patente" name="Patente" pattern="[a-z,A-Z, ,0-9]{3,10}$" required>
+                <input type="text" class="form-control" id="Patente" name="Patente" pattern="[A-Z]{3}\s[0-9]{3}" required>
                 <label for="floatingInput">Patente</label>
                 <div class="invalid-feedback">
                     Debe ingresar una patente válida (solo números y letras hasta 10 carácteres)
